@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SK텔레콤과 해킹과 세기의 이혼</title>
+    <title>스트라이샌드 효과란?</title>
      <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbit&family=Song+Myung&display=swap" rel="stylesheet">
@@ -16,10 +16,20 @@
 
         body {
             font-family: 'Orbit', sans-serif;
-            background-color: #000;
+            background-image: url(bg2.png), url(bg.gif);
+                background-size: cover, 200px 200px;
+    background-attachment: fixed, fixed;
+    background-position: center, bottom;
+    background-repeat: repeat;
+    z-index: 0;
             color: #fff;
             overflow-x: hidden;
             word-break: keep-all;
+            cursor: url(cursor.cur), auto;
+        }
+
+        body background-image {
+filter: brightness(0.5);
         }
 
         .header-section {
@@ -119,6 +129,26 @@
             position: relative;
         }
 
+        .content-section2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 60px 40px;
+            max-width: 1200px;
+            margin: auto;
+            position: relative;
+        }
+
+        .content-section3 {
+            display: flex;
+            gap: 20px;
+            padding: 60px 40px;
+            max-width: 1200px;
+            margin: auto;
+            position: relative;
+        }
+
         .content-column h2 {
             font-size: 30px;
             font-weight: 400;
@@ -215,12 +245,12 @@
         }
 
         .circle-button {
-            position: absolute;
+            position: fixed; /* Change from absolute to fixed */
             width: 60px;
             height: 60px;
+            border: 1px solid #ffffff;
             border-radius: 50%;
             background: linear-gradient(135deg, #ff0000, #cc0000);
-            border: none;
             cursor: pointer;
             top: 50%;
             transform: translateY(-50%);
@@ -249,11 +279,40 @@
         }
 
         .circle-button.left {
-            left: -80px;
+            left: 20px; /* Change from -80px to 20px */
         }
 
         .circle-button.right {
-            right: -80px;
+            right: 20px; /* Change from -80px to 20px */
+        }
+
+                .footer {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            color: red;
+            background-color: #000;
+            border-radius: 0px;
+        }
+        
+        .copyright {
+            font-family: 'orbit', sans-serif;
+            font-size: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            gap: 50px;
+        }
+        
+        .contact-box {
+            padding: 20px;
+            font-family: 'orbit', sans-serif;
+            font-size: 15px;
+            border-radius: 5px;
+            color: red;
         }
     </style>
 </head>
@@ -261,21 +320,21 @@
     <div class="header-section">
         <div class="meme-grid">
             <div class="meme-item">
-                <div style="background: url(meme2.jpeg); height: 100%; display: flex; align-items: center; justify-content: center;background-size: cover;">
+                <div style="background: url(gif2.gif); height: 100%; display: flex; align-items: center; justify-content: center;background-size: cover;">
                     <div class="meme-overlay">
                         
                     </div>
                 </div>
             </div>
             <div class="meme-item">
-                <div style="background: url(meme3.jpg); height: 100%; position: relative; background-size: cover;">
+                <div style="background: url(mansion.jpg); height: 100%; position: relative; ">
                     <div class="meme-overlay">
 
                     </div>
                 </div>
             </div>
             <div class="meme-item">
-                <div style="background: url(gif3.gif); height: 100%; position: relative; background-size: cover;">
+                <div style="background: url(gif1.gif); height: 100%; position: relative; background-size: cover;">
                 </div>
             </div>
         </div>
@@ -284,26 +343,53 @@
     <div class="red-banner">
         <div class="scroll-container">
             <div class="scroll-text">
-                <div class="banner-text"> Relationship between Hacking & Divorce &nbsp;&nbsp; SK텔레콤 해킹과 세기의 이혼 &nbsp;&nbsp;Relationship between Hacking & Divorce &nbsp;&nbsp; SK텔레콤 해킹과 세기의 이혼 &nbsp;&nbsp; Relationship between Hacking & Divorce &nbsp;&nbsp; SK텔레콤 해킹과 세기의 이혼 &nbsp;&nbsp;Relationship between Hacking & Divorce &nbsp;&nbsp; SK텔레콤 해킹과 세기의 이혼 Relationship between Hacking & Divorce &nbsp;&nbsp; SK텔레콤 해킹과 세기의 이혼 &nbsp;&nbsp;Relationship between Hacking & Divorce &nbsp;&nbsp; SK텔레콤 해킹과 세기의 이혼</div>
+                <div class="banner-text">The Start of Streisand Effect &nbsp;&nbsp; 스트라이샌드 효과란?&nbsp;&nbsp;The Start of Streisand Effect &nbsp;&nbsp; 스트라이샌드 효과란?&nbsp;&nbsp;The Start of Streisand Effect &nbsp;&nbsp; 스트라이샌드 효과란?&nbsp;&nbsp;The Start of Streisand Effect &nbsp;&nbsp; 스트라이샌드 효과란?&nbsp;&nbsp;The Start of Streisand Effect &nbsp;&nbsp; 스트라이샌드 효과란?&nbsp;&nbsp;The Start of Streisand Effect &nbsp;&nbsp; 스트라이샌드 효과란?</div>
             </div>  
         </div>
     </div>
 
-    <div class="content-section">
+    <div class="content-section" style="padding-top: 150px;">
         <div class="content-column">
-            <h2>Definition</h2>
-            <p>2025년 4월 발생한 대규모 개인정보 유출 사건 당시, 수많은 유심(USIM) 정보가 유출되면서 2300만 가입자들 사이에서 우려가 커졌습니다. 이로 인해 심 스와핑(SIM Swapping) 등 금융 사기를 포함한 2차 피해 가능성에 대한 불안감이 확산했습니다. <span class="highlight">사건 초기 SK텔레콤의 늦장 대응과 유심 교체 비용을 고객에게 전가하려는 듯한 태도, 그리고 유심 물량 부족 문제 등이 겹치면서 가입자들의 불만은 극에 달했습니다.</span> 이러한 상황 속에서 SK텔레콤의 대응을 비판하는 목소리가 온라인 커뮤니티를 중심으로 빠르게 퍼져나가기 시작했습니다.</p>
+            <p>스트라이샌드 효과는 <span class="highlight">특정 정보나 콘텐츠를 숨기거나 삭제하려는 시도가 오히려 그것에 대한 관심을 증폭시켜 더 널리 알려지게 되는 역설적인 사회 현상을 의미합니다.</span> 인터넷과 소셜 미디어의 발달로 정보의 전파 속도가 빨라지면서 이러한 현상이 더욱 두드러지게 나타나고 있습니다. 정보 통제가 오히려 화제가 되어 원래 목적과는 정반대의 결과를 낳게 되는 것이 핵심이며, 초기 사례인 바브라 스트라이샌드의 저택 사진을 둘러싼 논란에서 비롯된 개념입니다.</p>
 
-           
         </div>
 
         <div class="content-column">
-            <h2>Episode</h2>
-            <p>이 밈이 폭발적으로 확산된 계기는 한 직장인 커뮤니티 '블라인드'에 올라온 게시물이었습니다. 해당 게시물은 최태원 SK그룹 회장의 이혼 소송 과정에서 언급된 거액의 재산분할 금액과 SK텔레콤의 유심 교체 비용 문제를 비교하며 회사의 대응을 신랄하게 비판했습니다. 이 글은 큰 공감을 얻으며 순식간에 여러 커뮤니티로 퍼져나갔습니다. <span class="highlight">하지만 이후 최태원 회장 측 대리인의 해당 게시물 및 유사한 비판 글들을 삭제해달라는 요청이 여러 커뮤니티에 전달되었고, 실제로 일부 글이 삭제되거나 임시 조치되었습니다.</span> 이러한 삭제 시도는 오히려 대중의 호기심과 반발심을 자극하여 역효과를 불러왔습니다. 삭제 시도 자체가 뉴스가 되면서, 원래의 비판 내용은 더욱 널리 알려졌고, 다양한 패러디와 밈으로 재생산되었습니다. 결국, 정보를 통제하려던 시도가 역으로 정보의 확산을 부채질하며 SK텔레콤의 위기 대응 실패와 지배구조 문제를 상징하는 대표적인 인터넷 밈으로 자리 잡게 되었습니다.</p>
-        </div>
 
-        <a href="https://ms-choi2057.github.io/finalterm2/"><button class="circle-button left">◀</button></a>
-        <a href="https://ms-choi2057.github.io/finalterm4/"><button class="circle-button right">▶</button></a>
+            <p>이 용어가 유래한 <span class="highlight">2003년 미국의 유명 배우이자 가수인 바브라 스트라이샌드의 소송 사건으로 거슬러 올라갑니다.</span> 당시 캘리포니아 해안선 사진을 촬영한 사진작가에게 자신의 저택이 포함되어 있다며 사생활 침해를 이유로 기록삭제를 요구하며 소송을 제기했으나, 이는 오히려 언론의 큰 관심을 불러일으켰고, 해당 사진에 접근하는 사람이 급성장 초기 수백 명에서 불과 수십만 명으로 폭증하여 '스트라이샌드 효과'라고 부르게 되었습니다.</p>
+        </div>
+    </div>
+        <div class="content-section2">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d250.83174082046457!2d-118.79113099999998!3d34.015555!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e818e0eaab7f69%3A0xcd5102cdbb866e2c!2s6836%20Zumirez%20Dr%2C%20Malibu%2C%20CA%2090265!5e1!3m2!1sko!2sus!4v1749041632874!5m2!1sko!2sus" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p style="padding-top:15px;">당시 바브라 스트라이샌드의 자택 지도</p>
+        </div>
+      <div class="content-section2" style="padding-top: 100px;">
+            <img src="number.png" width="30%">
+            <p style="padding-top:15px;">소송에 대한 뉴스 보도 이후 그녀의 자택 이미지의 조회수 기록</p>
+        </div>
+            <div class="content-section2" style="padding-top: 100px;">
+            <img src="number2.png" width="30%">
+            <p style="padding-top:15px;">소송 초기에 청구된 보상 비용. 하지만 패소 이후 소송 관련 비용까지 다 토해내야 했다.</p>
+        </div>
+    
+        <div class="footer">
+            <div class="copyright" style="padding-top: 20px;">Copyright 2025 About streisand effect. <br>All rights reserved by Minseok Choi.</div>
+            
+            <div class="contact-info">
+                <div class="contact-box">
+                    Address<br>
+                    <span>CENSORED TO AVOID BEING SUED</span>
+                </div>
+                
+                <div class="contact-box">
+                    Contact<br>
+                    <span>CENSORED TO AVOID BEING SUED</span>
+                </div>
+            </div>
+        </div>
+    </div>
+        <a href="https://ms-choi2057.github.io/finalterm/"><button class="circle-button left">◀</button></a>
+        <a href="https://ms-choi2057.github.io/finalterm3/"><button class="circle-button right">▶</button></a>
     </div>
 </body>
 </html>
