@@ -13,13 +13,28 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+@font-face {
+    font-family: 'PartialSansKR-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/PartialSansKR-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
         body {
             font-family: 'Orbit', sans-serif;
-            background-color: #000;
+            background-image: url(bg2.png), url(bg.gif);
+                background-size: cover, 200px 200px;
+    background-attachment: fixed, fixed;
+    background-position: center, bottom;
+    background-repeat: repeat;
+    z-index: 0;
             color: #fff;
             overflow-x: hidden;
             word-break: keep-all;
+            cursor: url(cursor.cur), auto;
+        }
+
+        body background-image {
+filter: brightness(0.5);
         }
 
         .header-section {
@@ -99,6 +114,7 @@
         }
 
         .banner-text {
+                font-family: 'PartialSansKR-Regular';
             font-size: 24px;
             font-weight: 400;
             letter-spacing: 2px;
@@ -118,6 +134,26 @@
             margin: 0 auto;
             position: relative;
         }
+        
+        .content-section2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 60px 40px;
+            max-width: 1200px;
+            margin: auto;
+            position: relative;
+        }
+
+        .content-section3 {
+            display: flex;
+            gap: 20px;
+            padding: 60px 40px;
+            max-width: 1200px;
+            margin: auto;
+            position: relative;
+        }
 
         .content-column h2 {
             font-size: 30px;
@@ -134,61 +170,49 @@
             margin-bottom: 20px;
             font-weight: 400;
         }
-
-        .tweet-mockup {
-            background: #15202b;
-            border-radius: 15px;
-            padding: 20px;
-            margin: 20px 0;
-            border: 1px solid #38444d;
-        }
-
-        .tweet-header {
+ .social-card {
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
+            gap: 15px;
+            background: white;
+            color: black;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
         }
 
-        .tweet-avatar {
+        .social-icon {
             width: 40px;
             height: 40px;
+            background: black;
             border-radius: 50%;
-            background: #1da1f2;
-            margin-right: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
             color: white;
-        }
-
-        .tweet-info {
-            flex-grow: 1;
-        }
-
-        .tweet-username {
             font-weight: bold;
-            color: #fff;
-            font-size: 14px;
         }
 
-        .tweet-handle {
-            color: #8899a6;
-            font-size: 12px;
+        .social-content {
+            flex: 1;
         }
 
-        .tweet-content {
-            color: #fff;
-            font-size: 14px;
-            line-height: 1.4;
-            margin-bottom: 15px;
+        .social-handle {
+            font-weight: bold;
+            margin-bottom: 5px;
         }
 
-        .tweet-stats {
+        .social-text {
+            font-size: 0.9em;
+            color: #333;
+        }
+
+        .social-stats {
             display: flex;
             gap: 20px;
-            color: #8899a6;
-            font-size: 12px;
+            margin-top: 10px;
+            font-size: 0.8em;
+            color: #666;
         }
 
         .mansion-image {
@@ -215,12 +239,12 @@
         }
 
         .circle-button {
-            position: absolute;
+            position: fixed; /* Change from absolute to fixed */
             width: 60px;
             height: 60px;
+            border: 1px solid #ffffff;
             border-radius: 50%;
             background: linear-gradient(135deg, #ff0000, #cc0000);
-            border: none;
             cursor: pointer;
             top: 50%;
             transform: translateY(-50%);
@@ -249,11 +273,11 @@
         }
 
         .circle-button.left {
-            left: -80px;
+            left: 20px; /* Change from -80px to 20px */
         }
 
         .circle-button.right {
-            right: -80px;
+            right: 20px; /* Change from -80px to 20px */
         }
     </style>
 </head>
@@ -291,16 +315,91 @@
 
     <div class="content-section">
         <div class="content-column">
-            <h2>Definition</h2>
             <p>2025년 4월 발생한 대규모 개인정보 유출 사건 당시, 수많은 유심(USIM) 정보가 유출되면서 2300만 가입자들 사이에서 우려가 커졌습니다. 이로 인해 심 스와핑(SIM Swapping) 등 금융 사기를 포함한 2차 피해 가능성에 대한 불안감이 확산했습니다. <span class="highlight">사건 초기 SK텔레콤의 늦장 대응과 유심 교체 비용을 고객에게 전가하려는 듯한 태도, 그리고 유심 물량 부족 문제 등이 겹치면서 가입자들의 불만은 극에 달했습니다.</span> 이러한 상황 속에서 SK텔레콤의 대응을 비판하는 목소리가 온라인 커뮤니티를 중심으로 빠르게 퍼져나가기 시작했습니다.</p>
 
            
         </div>
 
         <div class="content-column">
-            <h2>Episode</h2>
             <p>이 밈이 폭발적으로 확산된 계기는 한 직장인 커뮤니티 '블라인드'에 올라온 게시물이었습니다. 해당 게시물은 최태원 SK그룹 회장의 이혼 소송 과정에서 언급된 거액의 재산분할 금액과 SK텔레콤의 유심 교체 비용 문제를 비교하며 회사의 대응을 신랄하게 비판했습니다. 이 글은 큰 공감을 얻으며 순식간에 여러 커뮤니티로 퍼져나갔습니다. <span class="highlight">하지만 이후 최태원 회장 측 대리인의 해당 게시물 및 유사한 비판 글들을 삭제해달라는 요청이 여러 커뮤니티에 전달되었고, 실제로 일부 글이 삭제되거나 임시 조치되었습니다.</span> 이러한 삭제 시도는 오히려 대중의 호기심과 반발심을 자극하여 역효과를 불러왔습니다. 삭제 시도 자체가 뉴스가 되면서, 원래의 비판 내용은 더욱 널리 알려졌고, 다양한 패러디와 밈으로 재생산되었습니다. 결국, 정보를 통제하려던 시도가 역으로 정보의 확산을 부채질하며 SK텔레콤의 위기 대응 실패와 지배구조 문제를 상징하는 대표적인 인터넷 밈으로 자리 잡게 되었습니다.</p>
         </div>
+
+        <div class="social-card">
+                <div class="social-icon">V</div>
+                <div class="social-content">
+                    <div class="social-handle">VICE • @VICE • 5h</div>
+                    <div class="social-text">
+마누라 교체비용은 2조를 쓰면서 유심교체에는 돈 안쓴다고
+역대급 좋아요 수였는데 삭제된듯
+내 댓글에만 좋아요 300개였는데 ㅋㅋㅋ
+
+블라에서 skt직원은 실종되고 관련글은 삭제하면서 유심은 안바꿔주는 skt</div>
+                    <div class="social-stats">
+                        <span>💬 219</span>
+                        <span>🔄 279</span>
+                        <span>❤️ 894</span>
+                        <span>📤</span>
+                    </div>
+                </div>
+            </div> 
+                    <div class="social-card">
+                <div class="social-icon">V</div>
+                <div class="social-content">
+                    <div class="social-handle">VICE • @VICE • 5h</div>
+                    <div class="social-text">SKT의 칩이란 한 글자에 점 하나를 찍으면 최태원의 첩이 되는데</div>
+                    <div class="social-stats">
+                        <span>💬 219</span>
+                        <span>🔄 279</span>
+                        <span>❤️ 894</span>
+                        <span>📤</span>
+                    </div>
+                </div>
+            </div> 
+                    <div class="social-card">
+                <div class="social-icon">V</div>
+                <div class="social-content">
+                    <div class="social-handle">VICE • @VICE • 5h</div>
+                    <div class="social-text">칩 대신 첩
+칩에는 돈 못 써 첩에는 돈 써 2조
+
+요새 일하면서 현타 씨게 온다
+회장이 맨날 행복타령 행복팔이 행복강요
+그놈의 행복행복
+
+지 마누라 바꿔서 행복하자고
+구성원들 갈아넣고있노</div>
+                    <div class="social-stats">
+                        <span>💬 219</span>
+                        <span>🔄 279</span>
+                        <span>❤️ 894</span>
+                        <span>📤</span>
+                    </div>
+                </div>
+            </div> 
+                    <div class="social-card">
+                <div class="social-icon">V</div>
+                <div class="social-content">
+                    <div class="social-handle">VICE • @VICE • 5h</div>
+                    <div class="social-text">SK는 왜그러냐
+본처 2조,첩 1조
+조를 뿌리는 기업이
+고객 해킹으로
+유심을 갈아야 하는데
+늦장은 물론
+못믿겟다고 떠나려는 고객들
+위약금 챙기는 꼬라지가
+도데체 뭔 꼬라지냐?
+니들이 잘못 하고
+왜 고객한테 위약금을 받어?</div>
+                    <div class="social-stats">
+                        <span>💬 219</span>
+                        <span>🔄 279</span>
+                        <span>❤️ 894</span>
+                        <span>📤</span>
+                    </div>
+                </div>
+            </div> 
+
 
         <a href="https://ms-choi2057.github.io/finalterm2/"><button class="circle-button left">◀</button></a>
         <a href="https://ms-choi2057.github.io/finalterm4/"><button class="circle-button right">▶</button></a>
