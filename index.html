@@ -296,15 +296,15 @@ filter: brightness(0.5);
         }
 
         .circle-button {
-            position: fixed; /* Change from absolute to fixed */
+            position: fixed; 
             width: 60px;
             height: 60px;
             border: 1px solid #ffffff;
             border-radius: 50%;
             background: linear-gradient(135deg, #ff0000, #cc0000);
             cursor: pointer;
-            bottom: 20px;  /* Changed from top to bottom */
-            transform: none;  /* Removed translateY */
+            bottom: 20px;  
+            transform: none;  
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
@@ -331,17 +331,17 @@ filter: brightness(0.5);
         }
 
         .circle-button.left {
-            left: 20px; /* Change from -80px to 20px */
+            left: 20px; 
         }
 
 
         .circle-button.right {
-            right: 20px; /* Change from -80px to 20px */
+            right: 20px; 
         }
 
         .main-button {
             position: fixed;
-            bottom: 20px;  /* Changed from top to bottom */
+            bottom: 20px;  
             left: 50%;
             transform: translateX(-50%);
             padding: 12px 24px;
@@ -381,8 +381,8 @@ filter: brightness(0.5);
 }
 
 .scroll-container2 {
-    width: 100vw; /* Full viewport width */
-    margin-left: calc(-50vw + 50%); /* Center the container */
+    width: 100vw; 
+    margin-left: calc(-50vw + 50%); 
     margin-right: calc(-50vw + 50%);
     overflow: hidden;
     position: relative;
@@ -393,7 +393,7 @@ filter: brightness(0.5);
     display: flex;
     gap: 20px;
     animation: scroll-horizontal 25s linear infinite;
-    width: fit-content; /* Adjust width to content */
+    width: fit-content;
 }
 
 .scroll-content2 img {
@@ -409,8 +409,35 @@ filter: brightness(0.5);
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-50% - 10px)); /* Adjust for gap */
+        transform: translateX(calc(-50% - 10px)); 
     }
+}
+
+.footer {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px; 
+    position: relative;
+    z-index: 997; 
+    padding-bottom: 80px; 
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #999;
+}
+
+.footer a {
+    color: #ff0000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ffffff;
 }
 
 .content-section iframe {
@@ -423,7 +450,6 @@ filter: brightness(0.5);
 }
     </style>
 
-    </style>
 </head>
 <body>
     <a href="https://ms-choi2057.github.io/finalterm_final/" class="main-button">Streisand Effect</a>
@@ -476,7 +502,6 @@ filter: brightness(0.5);
 			<img src="scroll1.jpg">
 			<img src="scroll2.jpg">
 			<img src="scroll3.png">
-			<!-- Duplicate images for seamless scrolling -->
 			<img src="scroll1.jpg">
 			<img src="scroll2.jpg">
 			<img src="scroll3.png">
@@ -493,7 +518,7 @@ filter: brightness(0.5);
             <img src="numbers2.png" width="70%">
             <p style="padding-top:15px;">SKT 점유율 하락세</p>
         </div>
-        <div class="content-section" style="padding-top: 050px;">
+        <div class="content-section">
         <div class="content-column">
             <p>기업이나 조직이 위기 상황에서 정보 통제나 검열에 집중하면, 대중은 그 의도 자체에 더 큰 관심을 갖고, 정보의 자유와 투명성을 요구하며 해당 이슈를 더 적극적으로 공유하게 됩니다.
 
@@ -502,10 +527,18 @@ SKT 사례처럼, 부정적 게시글을 삭제하려는 시도는 오히려 네
 따라서, 위기 상황에서는 투명하고 신속한 정보 공개와 소통이 장기적으로 신뢰 회복과 평판 관리에 더 효과적이라는 사실을 명심해야 합니다.</p>
 
         </div>
+
     
         <a href="https://ms-choi2057.github.io/finalterm2/"><button class="circle-button left">◀</button></a>
         <a href="https://ms-choi2057.github.io/finalterm4/"><button class="circle-button right">▶</button></a>
-    </div>
+            <!-- Add footer -->
+    <footer class="footer">
+        <p>© 2025 Streisand Effect Project</p>
+        <p>Made with ❤️ by <a href="https://www.instagram.com/post_designerseok/">Minseok Choi</a></p>
+        <p>Contact: alstjr2057@naver.com</p>
+    </footer>
+
+    <!-- Bottom gradient -->
     <div class="bottom-gradient"></div>
 </body>
 </html>
